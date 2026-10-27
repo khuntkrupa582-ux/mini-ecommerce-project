@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Shop - Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <a class="logo" href="#">Mini<span>Shop.</span></a>
+      <a class="cart-link" href="#shopping-cart">
+        My Cart <span id="cartCount">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">WELCOME TO MINI SHOP</p>
+      <h1>Find your everyday essentials.</h1>
+      <p>Simple products, friendly prices, easy shopping.</p>
+    </section>
+
+    <section class="products-section">
+      <div class="section-heading">
+        <div>
+          <h2>Our Products</h2>
+          <p>Choose your favourite items.</p>
+        </div>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section id="shopping-cart" class="cart-section">
+      <h2>Your Shopping Cart</h2>
+      <div id="cartItems"></div>
+
+      <div class="cart-summary">
+        <p>Subtotal <span id="subtotal">₹0</span></p>
+        <p>Delivery <span id="delivery">₹0</span></p>
+        <div class="grand-total">
+          <strong>Total</strong>
+          <strong id="total">₹0</strong>
+        </div>
+        <button id="checkoutBtn" class="checkout-btn" disabled>
+          Preview Checkout
+        </button>
+        <p class="demo-note">Demo checkout only. No payment is taken.</p>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="checkoutDialog" class="checkout-dialog">
+    <div class="dialog-content">
+      <h2>Order Preview</h2>
+      <p class="demo-label">DEMO ONLY — NO PAYMENT</p>
+      <div id="orderSummary"></div>
+      <p class="dialog-total">
+        Order total: <strong id="dialogTotal">₹0</strong>
+      </p>
+      <button id="closeDialog" class="close-btn">Close Preview</button>
+    </div>
+  </dialog>
+
+  <footer>
+    <p>Mini Shop — Practice E-Commerce Project</p>
+  </footer>
+</body>
+</html>
